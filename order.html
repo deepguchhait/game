@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="icon" href="assets/image/logo.png">
+    <link href="https://cdn.jsdellvr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <section class="first">
+        <div class="navbar">
+            <h1 class="logo">Fo<i class="fa-solid fa-magnifying-glass fa-flip-both fa-xs"></i>d</h1>
+            <ul class="navhover">
+               <li id="fli"><a href="index.html">HOME</a></li>
+                <li><a href="about_us.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="contact_us.html">CONTACT US</a></li>
+            </ul>
+            <ul class="button">
+                <li id="signin"><a href="login.html"><button>log In</button></a></li>
+
+            </ul>
+        </div>
+
+        <div class="order">
+            <h1 class="order-con">Order</h1>
+            <div class="tab-titles">
+               <p class="tab-links active-link" onclick="opentab('skills')">Book A Table</p>
+               <p class="tab-links" onclick="opentab('experience')">Order in Online</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+               <div class="oredr-forms">
+                <div class="order-image">
+                    <img src="assets/image/bookatable.png">
+                </div>
+                <div class="first-order-form">
+                    <form>
+                        <label>Name</label><label>Email</label>
+                        <input type="text" id="name" placeholder="Your Name" >
+                        <input type="email" id="email" placeholder="Your Email Id" >
+                        
+                        <label>Date & Time</label><label>No of People</label>
+                        <input type="text" placeholder="Date & Time" id="dt" >
+                        <select>
+                            <option value="1">People 1</option>
+                            <option value="2">People 2</option>
+                            <option value="3">People 3</option>
+                            <option value="4">People 4</option>
+
+                        </select>
+                        <label>Special Reqest</label><label></label>
+                        <textarea placeholder="Special Reqest">
+
+                        </textarea><br>
+
+                        <button onclick="return bat();">Book a Table</button>
+                    </form>
+                </div>
+               </div>
+           </div>
+           <div class="tab-contents" id="experience">
+            <div class="oredr-forms">
+                <div class="first-order-form online-order">
+                    <form>
+                        <label>Name</label><label>Adderss</label>
+                        <input type="text"  id="oname" placeholder="Your Name">
+                        <input type="text" placeholder="Your Adderss" id="text">
+                        
+                        <label>Phone Number</label><label>Email</label>
+                        <input type="text" placeholder="Your Phone Number" id="num">
+                        <input type="email" placeholder="Your Email Id" id="oemail">
+                        
+                        <label>Your Order</label><label>How Much</label>
+                        <input type="text" placeholder="Your Order" id="iname">
+                        <input type="text" placeholder="Hoy Many Order" id="order">
+                        
+                        <button onclick="return online();">Order Now</button>
+                    </form>
+                </div>
+                
+                <div class="order-image online-image">
+                    <img src="assets/image/onlineorder.png">
+                </div>
+               </div>
+           </div>  
+            
+       </div>
+
+        <div class="footer">
+            <div class="fcon">
+                <div class="box">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h1>Contact</h1>
+                    <p>123 Street, New York, USA</p>
+                    <p>+0123456789</p>
+                    <p>info@example.com</p>
+                    <div class="contact-icons">
+                        <div class="f-icon">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="f-icon">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="f-icon">
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="f-icon">
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1>Opening</h1>
+                    <h3>Monday - Saturday</h3>
+                    <p>09.00AM - 09.00PM</p>
+                    <h3>Sunday</h3>
+                    <p>10.00AM - 08.00PM</p>
+                </div>
+                <div class="box">
+                    <h1>Newsletter</h1>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="new-input">
+                        <input type="email" placeholder="Your Email">
+                        <button><a href="login.html">SIGNUP</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; Food, All Right Reserved. Designed By Deep</p>
+            </div>
+        </div>
+
+    </section>
+    <script>
+    //    var tablinks = document.getElementsByClassName("tab-links");
+    // var tabcontents = document.getElementsByClassName("tab-contents");
+    // function opentab(tabname){
+    //     for(tablink of tablinks){
+    //         tablink.classList.remove("active-link");
+    //     }
+    //     for(tabcontent of tabcontents){
+    //         tabcontent.classList.remove("active-tab");
+    //     }
+    //     event.currentTarget.classList.add("active-link");
+    //     document.getElementById(tabname).classList.add("active-tab");
+    // }
+    </script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
